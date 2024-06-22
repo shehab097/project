@@ -2,9 +2,12 @@
 #include<math.h>
 #include<conio.h>       //getch()
 #include <stdlib.h>     // system("cls");
+/*
+NOTE: for linux , please replace system("cls") by system("clear") in line number: 18,64,115,201,296
+system("cls") used in windows opreating system
+*/
 
-
-void temp(); //tepm converter
+void temp(); //temp converter
 void speed(); //speed convrter
 void mass(); // mass converter
 void currency();  //currency converter
@@ -12,8 +15,8 @@ void currency();  //currency converter
 //main function
 int main() {
     //system("clear"); Linux and Mac
-	system("cls"); //windows
-	
+    system("cls"); //windows
+
     int main_menu;
     printf("\n---------- UNIT CONVERTER ----------\n");
     printf("1. Temperature\n");
@@ -48,7 +51,7 @@ int main() {
         // printf("Author: Shehab\n");
         return 0;
         break;
-        
+
     default:
         printf("Wrong Input\n");
         main();
@@ -58,18 +61,18 @@ int main() {
 //for temperature
 void temp() {
     //system("clear"); Linux and Mac
-	system("cls");
+    system("cls");
 
     printf("\n---------- 1. Temperature ---------\n");
     printf("1. Fahrenheit to Celsius\n");
     printf("2. Celsius to Fahrenheit\n");
-    printf("*. Press any key to back main menu...\n");
+    //printf("*. Press any key to back main menu...\n");
     printf("\n--------------------------------------\n\n");
 
     int temp_menu;
     scanf("%d", &temp_menu);
-    
-	float c, f;
+
+    float c, f;
     switch (temp_menu) {
 
     case 1:
@@ -109,14 +112,14 @@ void temp() {
 //for speed calculation
 void speed() {
     //system("clear"); Linux and Mac
-	system("cls");
+    system("cls");
 
     printf("\n---------- 2. Valocity ---------      \n");
     printf("1. km/h to m/s      \n");
     printf("2. m/s to km/h      \n");
     printf("3. km/h to mile/h   \n");
     printf("4. mile/h to km/h   \n");
-    printf("*. Press any key to back main menu...   \n");
+    //printf("*. Press any key to back main menu...   \n");
     printf("\n---------------------------------     \n");
 
     int temp_menu;
@@ -127,12 +130,12 @@ void speed() {
 
     switch (temp_menu) {
     case 1:
-    	m_s = 0,km_h =0;
+        m_s = 0, km_h = 0;
         printf("1. km/h to m/s \n\n");
 
         printf("Enter km/s : ");
         scanf("%f", &km_h);
-	
+
         m_s = (km_h * 1000) / (3600);
         printf("%.2f km/h = %.2f m/s\n", km_h, m_s);
 
@@ -142,7 +145,7 @@ void speed() {
         break;
 
     case 2:
-    	km_h = 0,m_s = 0;
+        km_h = 0, m_s = 0;
         printf("2. m/s to km/h \n\n");
 
         printf("Enter km/h : ");
@@ -154,9 +157,9 @@ void speed() {
         printf("\nPress any key to Back to main menu...\n");
         getch();
         main();
-        
+
     case 3:
-    	kmph = 0, miph = 0;
+        kmph = 0, miph = 0;
         printf("3. km/h to mile/h\n\n");
         printf("Enter km/h: ");
         scanf("%f", &kmph);
@@ -171,7 +174,7 @@ void speed() {
         break;
 
     case 4:
-    	miph = 0, kmph =0;
+        miph = 0, kmph = 0;
         printf("4. mile/h to km/h\n\n");
         printf("Enter mile/h: ");
         scanf("%f", &miph);
@@ -196,7 +199,7 @@ void speed() {
 //mass
 void mass() {
     //system("clear"); Linux and Mac
-	system("cls");
+    system("cls");
 
     printf("\n---------- 3. Mass ---------\n");
 
@@ -204,7 +207,7 @@ void mass() {
     printf("2. gm to Kg\n");
     printf("3. lb to kg\n");
     printf("4. kg to lb\n");
-    printf("*. Press any key to Back to main menu...\n");
+    //printf("*. Press any key to Back to main menu...\n");
     printf("\n----------------------------\n");
 
     float kg, gm, lb; //defining
@@ -290,8 +293,8 @@ void currency() {  //currency converter
 
     int currency_menu;
     //system("clear"); Linux and Mac
-	system("cls");
-	
+    system("cls");
+
     printf("\n---------- 4. currency ---------\n");
 
     printf("1. USD to BDT\n");
@@ -300,7 +303,7 @@ void currency() {  //currency converter
     printf("4. RS to BDT\n");
     printf("5. BDT to Yen\n");
     printf("6. Yen to BDT\n");
-    printf("*. Press any key to Back to main menu...\n");
+    //printf("*. Press any key to Back to main menu...\n");
 
     printf("\n----------------------------------\n");
 
